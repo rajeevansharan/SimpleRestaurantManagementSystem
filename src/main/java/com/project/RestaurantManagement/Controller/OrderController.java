@@ -24,5 +24,8 @@ public class OrderController {
         return orderService.getAllOrders();
     }
 
-
+@GetMapping("/status/{status}")
+    public List<Order> getOrdersByStatus(@PathVariable OrderStatus status) {
+        return orderService.getOrdersByStatus(status);
+    }
 }
