@@ -28,4 +28,10 @@ public class OrderController {
     public List<Order> getOrdersByStatus(@PathVariable OrderStatus status) {
         return orderService.getOrdersByStatus(status);
     }
+
+    @PutMapping("/{orderId}/status")
+    public Order updateOrderStatus(@PathVariable Long orderId,
+                                   @RequestParam OrderStatus status) {
+        return orderService.updateOrderStatus(orderId, status);
+    }
 }
