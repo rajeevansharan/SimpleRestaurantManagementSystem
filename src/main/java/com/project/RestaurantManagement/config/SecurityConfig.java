@@ -26,7 +26,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**", "/api/menu/**").permitAll()
                         .anyRequest().authenticated()
                 )
-                .httpBasic(Customizer.withDefaults());
+                .formLogin(Customizer.withDefaults()); // Spring Security to generate a default HTML login page at /login
 
         return http.build();
     }
