@@ -1,5 +1,4 @@
 package com.project.RestaurantManagement.Controller;
-
 import com.project.RestaurantManagement.DTO.AuthRequest;
 import com.project.RestaurantManagement.DTO.AuthResponse;
 import com.project.RestaurantManagement.Security.JwtUtil;
